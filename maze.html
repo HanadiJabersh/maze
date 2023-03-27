@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="maze.js"></script>
+    
+</head>
+
+<style>
+    .maze {
+        width: 400px;
+        height: 200px;
+        border: 1px solid black;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .boundary {
+        background-color:dimgray;
+        position: absolute;
+    }
+    .btnstyle{
+        visibility: hidden;
+        
+    }
+    .start {
+        background-color: green;
+        position:absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        text-emphasis: bold;
+        left:0px;
+        top:120px;
+        width:40px;
+        height:40px;
+    }
+    .end {
+        background-color: blue;
+        position:absolute;
+        right:0px;
+        top:120px;
+        width:40px;
+        height:40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        text-emphasis: bold;
+    }
+    p{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        text-emphasis: bold;
+    }
+    #game-start{
+        font-size: larger;
+    }
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">Maze Game</h1>
+<div> <label id="game-start"></label></div>
+<div class="maze">
+    <div class="start" onmouseover="startGame()">S</div>
+    <div class="boundary" style="width:400px; height:40px"></div>
+    <div class="boundary" style="top:40px; width:120px; height:80px"></div>
+    <div class="boundary" style="top:40px; left:280px; width:120px; height:80px"></div>
+    <div class="boundary" style="top:80px; left:160px; width:80px; height:80px "></div>
+    <div class="boundary" style="top:160px; width:400px; height:40px "></div> 
+    <div class="end" onmouseover="win()"><p>E</p></div>
+</div>
+
+<div> <label id="win"></label></div>
+<button class="btnstyle" id="trybtn"  onclick="location.reload()" width="200px" height="50px"style="position: absolute; top: 70%; left: 50%;transform: translate(-50%, -50%);">Try Again</button>
+</body>
+</html>
